@@ -14,7 +14,8 @@
 </p>
 
 <p align="center">
-  <img src="screenshots/home-transfer.png" alt="My 360 Storage - Home screen" width="260"/>
+  <img src="/home-transfer.png" alt="My 360 Storage - Home screen" width="260"/>
+  <img src="/home-transfer-game.png" alt="My 360 Storage - Home screen game" width="260"/>
 </p>
 
 ---
@@ -48,11 +49,11 @@ Say goodbye to complicated folder structures. This app **automatically places fi
 ### 📸 Screenshots
 
 <p align="center">
-  <img src="screenshots/installed-games.png" alt="Installed games library" width="200"/>
-  <img src="screenshots/game-details.png" alt="Game details with cover art" width="200"/>
-  <img src="screenshots/dlc-saves-updates.png" alt="DLC, Saves and Updates tab" width="200"/>
-  <img src="screenshots/save-details.png" alt="Save game details" width="200"/>
-  <img src="screenshots/file-manager.png" alt="Basic file manager" width="200"/>
+  <img src="/installed-games.png" alt="Installed games library" width="200"/>
+  <img src="/game-details.png" alt="Game details with cover art" width="200"/>
+  <img src="/dlc-saves-updates.png" alt="DLC, Saves and Updates tab" width="200"/>
+  <img src="/save-details.png" alt="Save game details" width="200"/>
+  <img src="/file-manager.png" alt="Basic file manager" width="200"/>
 </p>
 
 ---
@@ -64,9 +65,9 @@ Say goodbye to complicated folder structures. This app **automatically places fi
 > When you connect your Xbox 360-formatted USB drive to your Android phone, **Android will NOT recognize the Xbox 360 file system**. You'll typically see this happen in three steps:
 
 <p align="center">
-  <img src="screenshots/format-warning-1-select-drive.png" alt="Step 1: Select the pendrive/HDD via OTG" width="200"/>
-  <img src="screenshots/format-warning-2-notification.png" alt="Step 2: Android shows a drive issue notification" width="200"/>
-  <img src="screenshots/format-warning-3-dialog.png" alt="Step 3: Android asks to format the USB drive" width="200"/>
+  <img src="/format-warning-1-select-drive.png" alt="Step 1: Select the pendrive/HDD via OTG" width="200"/>
+  <img src="/format-warning-2-notification.png" alt="Step 2: Android shows a drive issue notification" width="200"/>
+  <img src="/format-warning-3-dialog.png" alt="Step 3: Android asks to format the USB drive" width="200"/>
 </p>
 
 > 1. You select your pendrive/HDD in the app
@@ -80,7 +81,7 @@ Say goodbye to complicated folder structures. This app **automatically places fi
 #### 🔌 External HDD Power Requirements
 
 <p align="center">
-  <img src="screenshots/usb-hub-power.jpg" alt="Example of a powered USB hub setup" width="500"/>
+  <img src="/usb-hub-power.jpg" alt="Example of a powered USB hub setup" width="500"/>
 </p>
 
 > **External HDDs consume more power** than USB flash drives. Your phone may **not be able to supply enough power** to an external HDD through USB OTG alone.
@@ -156,11 +157,11 @@ Chega de estruturas de pastas complicadas. Este app **coloca os arquivos automat
 ### 📸 Capturas de Tela
 
 <p align="center">
-  <img src="screenshots/installed-games.png" alt="Biblioteca de jogos instalados" width="200"/>
-  <img src="screenshots/game-details.png" alt="Detalhes do jogo com capa" width="200"/>
-  <img src="screenshots/dlc-saves-updates.png" alt="Aba de DLC, Saves e Atualizações" width="200"/>
-  <img src="screenshots/save-details.png" alt="Detalhes do save" width="200"/>
-  <img src="screenshots/file-manager.png" alt="Gerenciador de arquivos básico" width="200"/>
+  <img src="/installed-games.png" alt="Biblioteca de jogos instalados" width="200"/>
+  <img src="/game-details.png" alt="Detalhes do jogo com capa" width="200"/>
+  <img src="/dlc-saves-updates.png" alt="Aba de DLC, Saves e Atualizações" width="200"/>
+  <img src="/save-details.png" alt="Detalhes do save" width="200"/>
+  <img src="/file-manager.png" alt="Gerenciador de arquivos básico" width="200"/>
 </p>
 
 ---
@@ -172,9 +173,9 @@ Chega de estruturas de pastas complicadas. Este app **coloca os arquivos automat
 > Ao conectar o pendrive formatado para Xbox 360 no seu celular Android, **o Android NÃO reconhecerá o sistema de arquivos do Xbox 360**. Normalmente isso acontece em três etapas:
 
 <p align="center">
-  <img src="screenshots/format-warning-1-select-drive.png" alt="Etapa 1: Selecione o pendrive/HD via OTG" width="200"/>
-  <img src="screenshots/format-warning-2-notification.png" alt="Etapa 2: Android exibe notificação de problema no dispositivo" width="200"/>
-  <img src="screenshots/format-warning-3-dialog.png" alt="Etapa 3: Android pede para formatar o dispositivo USB" width="200"/>
+  <img src="/format-warning-1-select-drive.png" alt="Etapa 1: Selecione o pendrive/HD via OTG" width="200"/>
+  <img src="/format-warning-2-notification.png" alt="Etapa 2: Android exibe notificação de problema no dispositivo" width="200"/>
+  <img src="/format-warning-3-dialog.png" alt="Etapa 3: Android pede para formatar o dispositivo USB" width="200"/>
 </p>
 
 > 1. Você seleciona o pendrive/HD no app
@@ -188,7 +189,7 @@ Chega de estruturas de pastas complicadas. Este app **coloca os arquivos automat
 #### 🔌 Requisitos de Energia para HD Externo
 
 <p align="center">
-  <img src="screenshots/usb-hub-power.jpg" alt="Exemplo de dispositivo com alimentação extra" width="500"/>
+  <img src="/usb-hub-power.jpg" alt="Exemplo de dispositivo com alimentação extra" width="500"/>
 </p>
 
 > **HDs externos consomem mais energia** que pendrives. Pode acontecer do seu celular **não conseguir fornecer energia suficiente** para um HD externo apenas pelo USB OTG.
@@ -264,11 +265,11 @@ Olvídate de estructuras de carpetas complicadas. Esta app **coloca automáticam
 ### 📸 Capturas de Pantalla
 
 <p align="center">
-  <img src="screenshots/installed-games.png" alt="Biblioteca de juegos instalados" width="200"/>
-  <img src="screenshots/game-details.png" alt="Detalles del juego con portada" width="200"/>
-  <img src="screenshots/dlc-saves-updates.png" alt="Pestaña de DLC, Saves y Actualizaciones" width="200"/>
-  <img src="screenshots/save-details.png" alt="Detalles del save" width="200"/>
-  <img src="screenshots/file-manager.png" alt="Administrador de archivos básico" width="200"/>
+  <img src="/installed-games.png" alt="Biblioteca de juegos instalados" width="200"/>
+  <img src="/game-details.png" alt="Detalles del juego con portada" width="200"/>
+  <img src="/dlc-saves-updates.png" alt="Pestaña de DLC, Saves y Actualizaciones" width="200"/>
+  <img src="/save-details.png" alt="Detalles del save" width="200"/>
+  <img src="/file-manager.png" alt="Administrador de archivos básico" width="200"/>
 </p>
 
 ---
@@ -280,9 +281,9 @@ Olvídate de estructuras de carpetas complicadas. Esta app **coloca automáticam
 > Al conectar tu USB formateado para Xbox 360 a tu teléfono Android, **Android NO reconocerá el sistema de archivos de Xbox 360**. Normalmente esto ocurre en tres pasos:
 
 <p align="center">
-  <img src="screenshots/format-warning-1-select-drive.png" alt="Paso 1: Selecciona la memoria USB/disco vía OTG" width="200"/>
-  <img src="screenshots/format-warning-2-notification.png" alt="Paso 2: Android muestra una notificación de problema con la unidad" width="200"/>
-  <img src="screenshots/format-warning-3-dialog.png" alt="Paso 3: Android pide formatear la unidad USB" width="200"/>
+  <img src="/format-warning-1-select-drive.png" alt="Paso 1: Selecciona la memoria USB/disco vía OTG" width="200"/>
+  <img src="/format-warning-2-notification.png" alt="Paso 2: Android muestra una notificación de problema con la unidad" width="200"/>
+  <img src="/format-warning-3-dialog.png" alt="Paso 3: Android pide formatear la unidad USB" width="200"/>
 </p>
 
 > 1. Seleccionas tu memoria USB/disco en la app
@@ -296,7 +297,7 @@ Olvídate de estructuras de carpetas complicadas. Esta app **coloca automáticam
 #### 🔌 Requisitos de Energía para Disco Duro Externo
 
 <p align="center">
-  <img src="screenshots/usb-hub-power.jpg" alt="Ejemplo de dispositivo con alimentación extra" width="500"/>
+  <img src="/usb-hub-power.jpg" alt="Ejemplo de dispositivo con alimentación extra" width="500"/>
 </p>
 
 > **Los discos duros externos consumen más energía** que las memorias USB. Puede que tu teléfono **no pueda suministrar suficiente energía** a un disco duro externo solo por USB OTG.
