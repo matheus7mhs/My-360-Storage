@@ -5,8 +5,9 @@
   <img src="https://img.shields.io/badge/Xbox_360-107C10?style=for-the-badge&logo=xbox&logoColor=white" alt="Xbox 360"/>
   <img src="https://img.shields.io/badge/USB_OTG-FF6F00?style=for-the-badge&logo=usb&logoColor=white" alt="USB OTG"/>
   <img src="https://img.shields.io/badge/GOD_|_XBLA_|_XEX-5C2D91?style=for-the-badge&logo=files&logoColor=white" alt="Formats"/>
-</p>
 
+<img src="1783441269687.png" width="30" alt="icon"> [Releases](https://github.com/matheus7mhs/My-360-Storage/releases)
+</p>
 <p align="center">
   <a href="#-english">English</a> •
   <a href="#-português-brasileiro">Português (BR)</a> •
@@ -345,6 +346,10 @@ Olvídate de estructuras de carpetas complicadas. Esta app **coloca automáticam
 
 <p align="center">
   </p>
+<details>
+<summary><b>🔍 Tags de Pesquisa (SEO)</b></summary>
+<p> enviar jogos Xbox 360 pelo celular Android, transferir jogos Xbox RGH JTAG sem PC, otg Android to Xbox 360, instalar DLC Xbox 360 celular, XexMenu, transfer Xbox 360 games via usb, Xbox FTP Transfer apk, My 360 Storage, transferir jogos celular para xbox 360 aurora, How to transfer RGH Xbox 360 games using a smartphone without a PC, Xbox FTP Transfer no apkpure, Como transferir arquivos do celular para o Xbox 360 via USB.</p>
+</details>
 
 <!--
 SEO keywords (hidden from rendered view, read by search engine crawlers):
