@@ -352,5 +352,5 @@ Xbox 360, USB OTG, Android, GOD format, XBLA, XEX, game manager, DLC installer, 
 Xbox 360 games, USB flash drive, external HDD, Xbox 360 content, title update, game backup,
 Xbox 360 folder structure, Games on Demand, Xbox Live Arcade, XEX games, USB manager,
 Xbox 360 Android, OTG cable, Xbox 360 save transfer, manage Xbox 360 USB, My 360 Storage,
-gerenciador de jogos Xbox 360, gestor de juegos Xbox 360, pendrive Xbox 360, memoria USB Xbox 360
+gerenciador de jogos Xbox 360, gestor de juegos Xbox 360, pendrive Xbox 360, memoria USB Xbox 360, como passar jogos pro Xbox pelo celular, #xbox360, #xboxrgh, Como transferir arquivos do celular para o Xbox 360 via USB, Como colocar jogos no PENDRIVE Xbox 360, How to transfer RGH Xbox 360 games using a smartphone without a PC,
 -->
