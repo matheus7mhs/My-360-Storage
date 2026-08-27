@@ -6,7 +6,8 @@
   <img src="https://img.shields.io/badge/USB_OTG-FF6F00?style=for-the-badge&logo=usb&logoColor=white" alt="USB OTG"/>
   <img src="https://img.shields.io/badge/GOD_|_XBLA_|_XEX-5C2D91?style=for-the-badge&logo=files&logoColor=white" alt="Formats"/>
 
-<img src="1783441269687.png" width="30" alt="icon"> [Releases](https://github.com/matheus7mhs/My-360-Storage/releases)
+* <img src="1783441269687.png" width="30" alt="icon"> [Releases](https://github.com/matheus7mhs/My-360-Storage/releases)
+* <img src="1783441173268.png" width="20" alt="icon"> [ApkPure](https://apkpure.com/my-360-storage-%E2%80%94-xbox-360-usb-otg-manager/mhs.usb.meuxbox)
 </p>
 <p align="center">
   <a href="#-english">English</a> •
