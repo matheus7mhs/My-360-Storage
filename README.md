@@ -12,7 +12,8 @@
 <p align="center">
   <a href="#-english">English</a> •
   <a href="#-português-brasileiro">Português (BR)</a> •
-  <a href="#-español">Español</a>
+  <a href="#-español">Español</a> •
+  <a href="#-français">Français</a>
 </p>
 
 <p align="center">
@@ -343,6 +344,115 @@ Olvídate de estructuras de carpetas complicadas. Esta app **coloca automáticam
 
 ¿Prefieres transferir juegos por red local en vez de USB? Echa un vistazo a **[Xbox FTP Transfer](https://github.com/matheus7mhs/Xbox-FTP-Transfer)** — una app complementaria que envía juegos de Xbox 360 directamente a tu consola vía FTP.
 
+---
+---
+
+# 🇫🇷 Français
+
+## 🎮 My 360 Storage — Gérez vos jeux, DLC, sauvegardes et mises à jour via USB OTG
+
+**My 360 Storage** est une application Android qui vous permet de **gérer, installer et organiser vos jeux, DLC, sauvegardes et mises à jour Xbox 360** directement sur une **clé USB ou un disque dur externe** connecté à votre téléphone via un **câble USB OTG** — aucun ordinateur ni console Xbox 360 requis !
+
+Dites adieu aux structures de dossiers compliquées. Cette application **place automatiquement les fichiers dans la bonne structure de répertoires Xbox 360**, prenant en charge les formats **GOD**, **XBLA** et **XEX** afin que votre console reconnaisse tout instantanément.
+
+---
+
+### ✨ Fonctionnalités
+
+| Fonctionnalité | Description |
+|---------|-------------|
+| 🎯 **Installation automatique des jeux** | Installe les jeux GOD, XBLA et XEX directement dans les bons dossiers Xbox 360 |
+| 📦 **Installateur de DLC** | Place automatiquement les fichiers DLC dans les répertoires de contenu appropriés |
+| 💾 **Gestion des sauvegardes** | Installez et gérez les sauvegardes de jeux avec un placement correct des dossiers |
+| 🔄 **Installateur de mises à jour** | Appliquez les mises à jour de jeux (title updates) au bon emplacement |
+| 🖼️ **Vue bibliothèque de jeux** | Parcourez les jeux installés avec leurs **jaquettes** et **noms de jeux** |
+| 📋 **Visualiseur de DLC et sauvegardes** | Consultez tous les DLC et sauvegardes installés par jeu |
+| 🗑️ **Désinstallation de jeux** | Supprimez des jeux, DLC ou sauvegardes directement depuis votre clé USB |
+| 📁 **Gestionnaire de fichiers** | Gestionnaire de fichiers basique — supprimer, copier, coller et **sauvegarder sur le stockage du téléphone** |
+| 📱 **Aucun accès root requis** | Fonctionne sur tout appareil Android compatible USB OTG |
+
+---
+
+### 📸 Captures d'écran
+
+<p align="center">
+  <img src="/installed-games.png" alt="Bibliothèque de jeux installés" width="200"/>
+  <img src="/game-details.png" alt="Détails du jeu avec jaquette" width="200"/>
+  <img src="/dlc-saves-updates.png" alt="Onglet DLC, Sauvegardes et Mises à jour" width="200"/>
+  <img src="/save-details.png" alt="Détails de la sauvegarde" width="200"/>
+  <img src="/file-manager.png" alt="Gestionnaire de fichiers basique" width="200"/>
+</p>
+
+---
+
+### ⚠️ AVERTISSEMENTS IMPORTANTS — À lire avant utilisation !
+
+#### 🚨 NE FORMATEZ PAS votre clé USB quand Android le demande !
+
+> Lorsque vous connectez votre clé USB formatée pour Xbox 360 à votre téléphone Android, **Android ne reconnaîtra pas le système de fichiers Xbox 360**. Cela se produit généralement en trois étapes :
+
+<p align="center">
+  <img src="/format-warning-1-select-drive.png" alt="Étape 1 : Sélectionnez la clé USB/DD via OTG" width="200"/>
+  <img src="/format-warning-2-notification.png" alt="Étape 2 : Android affiche une notification de problème de disque" width="200"/>
+  <img src="/format-warning-3-dialog.png" alt="Étape 3 : Android propose de formater la clé USB" width="200"/>
+</p>
+
+> 1. Vous sélectionnez votre clé USB/disque dur dans l'application
+> 2. Android affiche une notification du type *"Problème avec la clé USB [nom de votre disque] — Appuyez pour résoudre"*
+> 3. En appuyant dessus, une boîte de dialogue propose de **formater la clé USB**
+>
+> **⛔ N'APPUYEZ PAS SUR "Formater la clé USB" !** Si vous formatez le disque, **TOUS vos jeux, sauvegardes, DLC et données Xbox 360 seront définitivement perdus !**
+>
+> ✅ **Fermez simplement cette boîte de dialogue et ignorez la notification.** L'application gère le système de fichiers Xbox 360 en interne et n'a pas besoin qu'Android monte le disque nativement.
+
+#### 🔌 Besoins en alimentation des disques durs externes
+
+<p align="center">
+  <img src="/usb-hub-power.jpg" alt="Exemple de configuration avec hub USB alimenté" width="500"/>
+</p>
+
+> **Les disques durs externes consomment plus d'énergie** que les clés USB. Votre téléphone **ne peut pas toujours fournir suffisamment d'énergie** à un disque dur externe via USB OTG seul.
+>
+> Si votre disque dur n'est pas détecté ou se déconnecte sans cesse, utilisez un **accessoire alimenté** tel que :
+> - ✅ Un **hub USB 3.0 avec adaptateur d'alimentation externe**
+> - ✅ Un **hub USB-C avec entrée Power Delivery (PD)**
+> - ✅ Un **adaptateur SATA vers USB** avec câble d'alimentation double USB
+> - ✅ Ou un **disque dur externe avec son propre adaptateur d'alimentation**
+> - ✅ Les clés USB fonctionnent généralement sans alimentation supplémentaire
+
+---
+
+### 📋 Configuration requise
+
+- Appareil Android avec **prise en charge USB OTG**
+- **Câble/adaptateur USB OTG** (USB-C ou Micro-USB selon votre téléphone)
+- Clé USB ou disque dur externe **formaté par une console Xbox 360**
+- Fichiers de jeux Xbox 360 au format **GOD**, **XBLA** ou **XEX**
+
+---
+
+### 🚀 Comment utiliser
+
+1. **Connectez** votre clé USB Xbox 360 à votre téléphone via USB OTG
+2. **Ignorez** tout avertissement de formatage Android — fermez-le simplement
+3. **Ouvrez** My 360 Storage
+4. **Parcourez et installez** — Sélectionnez des jeux, DLC, sauvegardes ou mises à jour à installer
+5. **Gérez** — Affichez votre bibliothèque de jeux installés avec les jaquettes
+6. **Sauvegardez** — Copiez des fichiers vers le stockage interne de votre téléphone en guise de sauvegarde
+
+---
+
+### 📖 Manuel intégré à l'application
+
+> ℹ️ Pour un guide détaillé, appuyez sur le **bouton Info ℹ️** dans l'application pour accéder au manuel intégré avec des instructions étape par étape et des conseils de dépannage.
+
+---
+
+### 🔗 Projet associé
+
+Vous préférez transférer des jeux via votre réseau local plutôt que par USB ? Découvrez **[Xbox FTP Transfer](https://github.com/matheus7mhs/Xbox-FTP-Transfer)** — une application complémentaire qui envoie des jeux Xbox 360 directement vers votre console via FTP.
+
+---
 ---
 
 <p align="center">
