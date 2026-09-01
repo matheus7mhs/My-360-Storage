@@ -1,3 +1,62 @@
+<!---
+<h1 align="center">🎮 My 360 Storage</h1>
+
+<p align="center">
+  <b>Transferidor de Jogos e Arquivos para Xbox 360 via OTG | Sem PC</b>
+</p>
+
+---
+
+ About / Sobre / Acerca / À propos / О программе / 关于
+<details>
+<summary><b> Português</b></summary>
+<b>My 360 Storage</b> é o aplicativo Android definitivo para usuários de Xbox 360 (RGH/JTAG). Envie jogos, DLCs, saves e arquivos diretamente do seu celular para um Pendrive ou HD Externo via cabo OTG. <b>Sem precisar de PC ou cabo de rede!</b> Compatível com XexMenu, Aurora e FTP.
+</details>
+
+<details>
+<summary><b>English</b></summary>
+<b>My 360 Storage</b> is the ultimate Android app for Xbox 360 (RGH/JTAG) users. Send games, DLCs, saves, and files directly from your smartphone to a USB Flash Drive or External HD via OTG cable. <b>No PC or network cable needed!</b> Fully compatible with XexMenu, Aurora, and FTP.
+</details>
+
+<details>
+<summary><b> Español</b></summary>
+<b>My 360 Storage</b> es la aplicación Android definitiva para usuarios de Xbox 360 (RGH/JTAG). Envía juegos, DLCs, saves y archivos directamente desde tu móvil a un Pendrive o HD Externo vía cable OTG. <b>¡Sin necesidad de PC ni cable de red!</b> Compatible con XexMenu, Aurora y FTP.
+</details>
+
+<details>
+<summary><b> Français</b></summary>
+<b>My 360 Storage</b> est l'application Android ultime pour les utilisateurs de Xbox 360 (RGH/JTAG). Envoyez des jeux, DLCs, sauvegardes et fichiers directement de votre smartphone vers une clé USB ou un disque dur externe via câble OTG. <b>Sans PC ni câble réseau !</b> Compatible avec XexMenu, Aurora et FTP.
+</details>
+
+<details>
+<summary><b> Русский</b></summary>
+<b>My 360 Storage</b> — лучшее Android-приложение для пользователей Xbox 360 (RGH/JTAG). Отправляйте игры, DLC, сохранения и файлы прямо со смартфона на флешку или внешний HDD через OTG-кабель. <b>Без ПК и сетевого кабеля!</b> Совместимо с XexMenu, Aurora и FTP.
+</details>
+
+<details>
+<summary><b> 中文</b></summary>
+<b>My 360 Storage</b> 是Xbox 360 (RGH/JTAG) 用户的终极安卓应用。无需电脑或网线，直接通过OTG线将游戏、DLC、存档和文件从智能手机发送到U盘或移动硬盘。完美兼容XexMenu、Aurora和FTP。
+</details>
+
+---
+
+###  Features / Funcionalidades
+-  **100% Mobile:** Transfer files using only your Android smartphone and an OTG cable.
+-  **No PC Required:** Say goodbye to carrying around a laptop just to format or transfer games.
+-  **Full Compatibility:** Works perfectly with XexMenu, Aurora Dash, and FTP servers.
+-  **Smart Storage:** Manage your USB/External HD folders directly from the app.
+-  **Batch Transfer:** Send multiple games, DLCs, and updates at once.
+
+ Tags de Pesquisa / SEO Keywords (Oculto para busca)</b></summary>
+<p>
+<b>[PT-BR]</b> transferir jogos xbox 360 celular, enviar jogos xbox 360 android, otg android to xbox 360, transferir jogos xbox rgh jtag sem pc, instalar dlc xbox 360 celular, xexmenu android, transferir jogos celular para xbox 360 aurora, como passar jogos para pendrive xbox 360 pelo celular, my 360 storage apk, ftp transfer xbox 360 android, hd externo xbox 360 otg.<br><br>
+<b>[EN]</b> transfer xbox 360 games via usb, how to transfer rgh xbox 360 games using smartphone without pc, xbox ftp transfer apk, my 360 storage android, send games to xbox 360 from phone, otg usb transfer xbox 360, install dlc xbox 360 mobile, xexmenu file manager android, aurora dashboard transfer games, no pc xbox 360 game transfer, external hdd xbox 360 otg.<br><br>
+<b>[ES]</b> transferir juegos xbox 360 desde celular, pasar juegos xbox 360 rgh jtag sin pc, otg android a xbox 360, instalar dlc xbox 360 movil, xexmenu android, transferir juegos movil a xbox 360 aurora, my 360 storage apk, ftp transfer xbox 360 android, como pasar juegos a pendrive xbox 360.<br><br>
+<b>[FR]</b> transférer jeux xbox 360 depuis android, envoyer jeux xbox 360 rgh jtag sans pc, otg android vers xbox 360, installer dlc xbox 360 mobile, xexmenu android, transférer jeux mobile vers xbox 360 aurora, my 360 storage apk, ftp transfer xbox 360 android, comment mettre des jeux sur clé usb xbox 360.<br><br>
+<b>[RU]</b> передать игры xbox 360 с андроид, скинуть игры xbox 360 rgh jtag без пк, otg андроид на xbox 360, установить dlc xbox 360 с телефона, xexmenu android, передать игры с телефона на xbox 360 aurora, my 360 storage apk, ftp transfer xbox 360 android, как закинуть игры на флешку xbox 360.<br><br>
+<b>[ZH]</b> 安卓传xbox360游戏, 手机传xbox360 rgh jtag 免电脑, otg u盘 xbox360, 手机安装xbox360 dlc, xexmenu 安卓, 手机传游戏到xbox360 aurora, my 360 storage apk, ftp transfer xbox360 android, 安卓怎么把游戏传到xbox360 u盘.
+</p>
+--->
 # 🎮 My 360 Storage — OTG Game & DLC Installer para Xbox 360
 
 <p align="center">
@@ -459,7 +518,15 @@ Vous préférez transférer des jeux via votre réseau local plutôt que par USB
   </p>
 <details>
 <summary><b>🔍 Tags de Pesquisa (SEO)</b></summary>
-<p> enviar jogos Xbox 360 pelo celular Android, transferir jogos Xbox RGH JTAG sem PC, otg Android to Xbox 360, instalar DLC Xbox 360 celular, XexMenu, transfer Xbox 360 games via usb, Xbox FTP Transfer apk, My 360 Storage, transferir jogos celular para xbox 360 aurora, How to transfer RGH Xbox 360 games using a smartphone without a PC, Xbox FTP Transfer no apkpure, Como transferir arquivos do celular para o Xbox 360 via USB.</p>
+<p> enviar jogos Xbox 360 pelo celular Android, transferir jogos Xbox RGH JTAG sem PC, otg Android to Xbox 360, instalar DLC Xbox 360 celular, XexMenu, transfer Xbox 360 games via usb, Xbox FTP Transfer apk, My 360 Storage, transferir jogos celular para xbox 360 aurora, How to transfer RGH Xbox 360 games using a smartphone without a PC, Xbox FTP Transfer no apkpure, Como transferir arquivos do celular para o Xbox 360 via USB 
+<p>
+<b>[PT-BR]</b> transferir jogos de xbox 360  pelo celular, enviar jogos de xbox 360 com android, otg android to xbox 360, transferir jogos xbox rgh jtag sem pc, instalar dlc xbox 360 celular, xexmenu android, transferir jogos celular para xbox 360 aurora, como passar jogos para pendrive xbox 360 pelo celular, my 360 storage apk, ftp transfer xbox 360 android, hd externo xbox 360 otg.<br><br>
+<b>[EN]</b> transfer xbox 360 games via usb, how to transfer rgh xbox 360 games using smartphone without pc, xbox ftp transfer apk, my 360 storage android, send games to xbox 360 from phone, otg usb transfer xbox 360, install dlc xbox 360 mobile, xexmenu file manager android, aurora dashboard transfer games, no pc xbox 360 game transfer, external hdd xbox 360 otg.<br><br>
+<b>[ES]</b> transferir juegos xbox 360 desde celular, pasar juegos xbox 360 rgh jtag sin pc, otg android a xbox 360, instalar dlc xbox 360 movil, xexmenu android, transferir juegos movil a xbox 360 aurora, my 360 storage apk, ftp transfer xbox 360 android, como pasar juegos a pendrive xbox 360.<br><br>
+<b>[FR]</b> transférer jeux xbox 360 depuis android, envoyer jeux xbox 360 rgh jtag sans pc, otg android vers xbox 360, installer dlc xbox 360 mobile, xexmenu android, transférer jeux mobile vers xbox 360 aurora, my 360 storage apk, ftp transfer xbox 360 android, comment mettre des jeux sur clé usb xbox 360.<br><br>
+<b>[RU]</b> передать игры xbox 360 с андроид, скинуть игры xbox 360 rgh jtag без пк, otg андроид на xbox 360, установить dlc xbox 360 с телефона, xexmenu android, передать игры с телефона на xbox 360 aurora, my 360 storage apk, ftp transfer xbox 360 android, как закинуть игры на флешку xbox 360.<br><br>
+<b>[ZH]</b> 安卓传xbox360游戏, 手机传xbox360 rgh jtag 免电脑, otg u盘 xbox360, 手机安装xbox360 dlc, xexmenu 安卓, 手机传游戏到xbox360 aurora, my 360 storage apk, ftp transfer xbox360 android, 安卓怎么把游戏传到xbox360 u盘.
+</p>
 </details>
 
 <!--
