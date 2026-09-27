@@ -59,6 +59,495 @@
 --->
 # 🎮 My 360 Storage — OTG Game & DLC Installer para Xbox 360
 
+<!--
+# My 360 Storage 0.8.0
+
+Aplicativo Android para gerenciar jogos, DLCs, saves, atualizações e arquivos de armazenamento do **Xbox 360** diretamente pelo celular usando **USB OTG**.
+
+Com o My 360 Storage, é possível conectar um pendrive ou HD externo formatado pelo Xbox 360 ao telefone, identificar jogos nos formatos **GOD**, **XBLA** e **XEX**, copiar conteúdo para as pastas corretas, consultar a biblioteca instalada e fazer operações básicas de gerenciamento — sem precisar de computador ou de uma conexão FTP com o console.
+
+> **Importante:** este aplicativo trabalha com armazenamento USB conectado ao telefone por OTG. Ele não é o mesmo fluxo do Xbox FTP Transfer: não depende de conexão FTP com o Xbox 360 e não envia arquivos diretamente pela rede.
+
+Repositório oficial: [github.com/matheus7mhs/My-360-Storage](https://github.com/matheus7mhs/My-360-Storage)
+
+## Sobre o aplicativo
+
+O **My 360 Storage** foi criado para simplificar o gerenciamento de armazenamentos Xbox 360 em dispositivos Android. O aplicativo acessa o sistema de arquivos do pendrive ou HD por meio de USB Mass Storage e organiza o conteúdo de acordo com a estrutura esperada pelo console.
+
+Ele permite:
+
+- instalar jogos GOD, XBLA e XEX;
+- enviar arquivos avulsos para uma pasta escolhida;
+- instalar DLCs, saves e Title Updates;
+- identificar jogos pelo Title ID;
+- consultar jogos instalados no armazenamento USB;
+- visualizar nomes e capas de jogos;
+- calcular o espaço ocupado;
+- visualizar DLCs, saves e atualizações por jogo;
+- desinstalar jogos e conteúdos extras;
+- navegar pelo armazenamento usando um gerenciador de arquivos;
+- copiar e colar itens dentro do USB;
+- fazer backup de arquivos do USB para o armazenamento do telefone;
+- ejetar o dispositivo com segurança;
+- diagnosticar dispositivos USB e verificar a assinatura FATX;
+- continuar cópias em segundo plano por meio de um serviço do Android.
+
+## Principais recursos
+
+### Instalação automática de jogos
+
+O aplicativo reconhece a pasta raiz selecionada e monta o destino adequado para cada formato:
+
+- **XEX:** o usuário escolhe entre `Games` e `Apps`;
+- **GOD/STFS:** os arquivos são organizados em `Content/0000000000000000/<TitleID>/00007000`;
+- **XBLA:** os pacotes são tratados como conteúdo STFS e direcionados para a estrutura de conteúdo correspondente.
+
+A identificação de XEX utiliza o arquivo `default.xex`. Quando disponível, o aplicativo extrai o Title ID automaticamente. Para pacotes STFS, o parser reconhece os cabeçalhos `CON `, `LIVE` e `PIRS`.
+
+### Instalação de DLC, saves e atualizações
+
+A biblioteca identifica os principais tipos de conteúdo Xbox 360:
+
+| Código | Conteúdo |
+|---|---|
+| `00000001` | Save Game |
+| `00000002` | DLC / Marketplace Content |
+| `000B0000` | Title Update |
+| `00007000` | Jogo GOD |
+| `000D0000` / `000D0001` | Conteúdo Arcade/XBLA |
+
+O aplicativo associa extras ao jogo usando o Title ID e apresenta uma aba específica para DLCs, saves e atualizações.
+
+### Biblioteca de jogos instalados
+
+A tela **Meus Jogos** percorre o armazenamento conectado e cataloga:
+
+- jogos GOD/STFS em `Content/0000000000000000`;
+- jogos XEX em `Games` e `Apps`;
+- DLCs, saves e Title Updates associados aos jogos.
+
+Cada item pode apresentar:
+
+- nome do jogo;
+- Title ID;
+- capa;
+- localização no USB;
+- formato do conteúdo;
+- tamanho do jogo;
+- tamanho dos extras;
+- tamanho total do conjunto.
+
+Os nomes conhecidos são obtidos a partir do arquivo local `assets/jogos.csv`. Quando um Title ID não está no banco, o aplicativo exibe o próprio ID como fallback.
+
+### Gerenciador de arquivos
+
+O gerenciador permite navegar pela árvore do USB com breadcrumbs e informações de armazenamento. Ele oferece:
+
+- abertura de pastas;
+- seleção múltipla;
+- copiar;
+- colar;
+- excluir;
+- mostrar tamanho de arquivos e pastas;
+- rotular pastas de Title ID de forma mais legível;
+- iniciar backup para uma pasta do armazenamento interno do Android.
+
+As operações longas são executadas por `FileManagerService`, com progresso e notificação.
+
+### Backup para o celular
+
+Arquivos e pastas selecionados no USB podem ser copiados para um destino escolhido pelo Storage Access Framework do Android. O aplicativo evita sobrescrever automaticamente itens existentes, criando nomes alternativos quando necessário.
+
+### Transferências em segundo plano
+
+A cópia de jogos e arquivos utiliza `TransferService`, um foreground service do Android. A transferência possui:
+
+- notificação persistente;
+- progresso do arquivo atual;
+- progresso total;
+- contagem de arquivos;
+- `WakeLock` para evitar que a CPU durma durante a operação;
+- buffer de cópia de 64 KiB;
+- até três tentativas por arquivo;
+- tratamento de arquivos parcialmente criados;
+- mensagens para reconectar quando o USB é desconectado.
+
+### Diagnóstico USB
+
+A tela de diagnóstico lista dispositivos USB Mass Storage, solicita permissão e inicializa as partições em modo de leitura para coletar informações básicas.
+
+O diagnóstico verifica os primeiros 512 bytes e procura a assinatura `FATX`, característica do sistema de arquivos usado pelo Xbox 360. Essa tela é destinada à análise e não deve alterar o conteúdo do dispositivo.
+
+### Ejeção segura
+
+A tela principal possui uma ação para desconectar o destino de forma controlada. O aplicativo impede a ejeção enquanto há uma transferência ativa, reduzindo o risco de interromper uma escrita em andamento.
+
+## Novidades da versão 0.8.0
+
+A versão 0.8.0 representa uma evolução do aplicativo anterior, identificado internamente em partes da interface e da documentação como versão 0.7.8/7.8.1. A comparação abaixo foi feita com base no código, nos recursos e nos comentários presentes no pacote recebido.
+
+> O histórico público do GitHub possui commits principalmente relacionados ao README, traduções, imagens, política de privacidade e publicação. Ele não contém tags formais ou um changelog detalhado de cada release de código. Por isso, as novidades funcionais abaixo são descritas como mudanças observadas na base 0.8.0, e não como uma lista de commits individuais.
+
+### 1. Evolução do envio simples para um instalador Xbox 360
+
+O fluxo deixou de ser apenas uma cópia genérica de arquivos e passou a compreender a organização dos formatos usados pelo Xbox 360. A aplicação agora reconhece o tipo de conteúdo e pode montar automaticamente o destino esperado pelo console.
+
+### 2. Suporte integrado a GOD, XBLA e XEX
+
+A versão atual reúne os parsers e regras para trabalhar com:
+
+- pastas e pacotes XEX;
+- jogos GOD/STFS;
+- conteúdo Arcade/XBLA;
+- arquivos STFS com cabeçalhos `CON `, `LIVE` e `PIRS`.
+
+Para XEX, o aplicativo verifica `default.xex`, extrai o Title ID e permite escolher `Games` ou `Apps`. Para GOD/STFS, o destino é montado sob a estrutura `Content`.
+
+### 3. Gerenciamento de DLC, saves e Title Updates
+
+A biblioteca passou a separar o jogo principal dos conteúdos extras. A versão 0.8.0 apresenta uma aba de `DLC/Saves/Updates`, filtra os itens pelo jogo selecionado e permite calcular os tamanhos associados.
+
+### 4. Exclusão seletiva de conteúdo
+
+Foram adicionadas opções para:
+
+- apagar somente o jogo;
+- apagar um item extra individual;
+- apagar o jogo junto com DLCs, saves e atualizações.
+
+Todas as opções possuem confirmação antes da exclusão, mas a operação continua sendo permanente no dispositivo USB.
+
+### 5. Cálculo de tamanho total
+
+Os detalhes do jogo agora conseguem separar e somar:
+
+- tamanho do jogo principal;
+- DLCs;
+- saves;
+- Title Updates;
+- tamanho total do conjunto.
+
+A tela também apresenta o espaço usado e o espaço livre do armazenamento USB conectado.
+
+### 6. Gerenciador de arquivos completo para operações básicas
+
+A versão atual adiciona uma tela própria de gerenciamento de arquivos, com navegação, breadcrumbs, seleção múltipla, copiar, colar, excluir e backup para o armazenamento do celular.
+
+Isso permite usar o aplicativo não apenas como instalador de jogos, mas também como ferramenta de manutenção do armazenamento Xbox 360.
+
+### 7. Backup USB para o armazenamento do Android
+
+A função de backup permite selecionar arquivos ou pastas no dispositivo Xbox e escolher uma pasta de destino no celular usando o SAF. A operação possui progresso, notificação, tratamento de nomes duplicados e tentativas de cópia.
+
+### 8. Serviços separados para transferência e gerenciamento de arquivos
+
+A arquitetura foi dividida em dois serviços:
+
+- `TransferService`: instala jogos e arquivos selecionados;
+- `FileManagerService`: executa operações de copiar, colar e backup.
+
+Essa separação reduz a dependência da tela principal e permite que cópias longas continuem em foreground service.
+
+### 9. Tentativas automáticas e tratamento de falhas USB
+
+O código passou a lidar com problemas comuns de OTG, como:
+
+- cabo instável;
+- falta de energia para HD externo;
+- desconexão durante a cópia;
+- falha ao criar arquivo;
+- falha ao gravar dados;
+- arquivo parcial após uma interrupção.
+
+Há até três tentativas por arquivo e mensagens orientando o usuário a reconectar o dispositivo ou usar um hub alimentado.
+
+### 10. Diagnóstico de armazenamento e assinatura FATX
+
+A tela `UsbDiagActivity` foi adicionada para ajudar a diferenciar problemas de permissão, detecção, partição e sistema de arquivos. Ela inicializa o dispositivo e verifica a assinatura FATX sem executar operações de escrita.
+
+### 11. Informações de armazenamento na tela principal
+
+A interface passou a apresentar:
+
+- nome do dispositivo conectado;
+- capacidade total;
+- espaço usado;
+- espaço livre;
+- barra de utilização;
+- estado atual do destino.
+
+### 12. Ejeção segura do pendrive ou HD
+
+A versão atual inclui um botão de ejeção e bloqueia a ação enquanto uma transferência está ativa. Isso melhora o fluxo de desconexão do dispositivo e reduz o risco de remover o cabo durante uma escrita.
+
+### 13. Tutorial offline ampliado
+
+O tutorial em `assets/tutorial/index.html` foi ampliado com:
+
+- instruções passo a passo;
+- alerta para não formatar o USB;
+- explicação sobre o sistema FATX;
+- orientações para cabos OTG;
+- recomendações para HDs com alimentação extra;
+- instruções sobre bateria e execução em segundo plano;
+- imagens locais;
+- seleção de idioma;
+- suporte a tema claro e escuro.
+
+### 14. Interface responsiva e suporte a tablets
+
+Foram incluídos layouts alternativos para telas maiores:
+
+- `layout-sw600dp`;
+- `layout-sw905dp`.
+
+Também foi criada a classe `ScreenUtils`, que calcula colunas da grade, largura de diálogos e comportamento responsivo de acordo com a menor largura disponível.
+
+### 15. Tema claro e escuro
+
+`ThemeManager` permite restaurar e aplicar a preferência de tema antes da exibição das telas. O tutorial também recebe o tema por parâmetro para manter a apresentação consistente.
+
+### 16. Internacionalização
+
+O projeto contém recursos de strings para português, inglês, espanhol, francês e outros idiomas. O tutorial HTML também possui seleção de idioma própria.
+
+### 17. Atualização da base Android
+
+A versão 0.8.0 utiliza:
+
+- Android Gradle Plugin 8.11.0;
+- Gradle Wrapper 8.13;
+- Java 17;
+- `compileSdk 36`;
+- `targetSdk 36`;
+- `minSdk 24`;
+- View Binding;
+- AndroidX;
+- Material Components;
+- RecyclerView;
+- CardView;
+- DocumentFile;
+- libaums 0.10.0 para USB Mass Storage.
+
+## Comparação resumida
+
+| Área | Versões anteriores | My 360 Storage 0.8.0 |
+|---|---|---|
+| Objetivo | Cópia mais simples de arquivos | Instalação e gerenciamento de conteúdo Xbox 360 |
+| Conexão | Acesso USB básico | USB OTG com libaums e conexão compartilhada |
+| Jogos | Suporte mais limitado | GOD, XBLA, STFS e XEX |
+| Destino | Escolha manual ou fluxo simples | Estrutura automática `Content`, `Games` ou `Apps` |
+| Title ID | Identificação limitada | Parsing de `default.xex` e cabeçalho STFS |
+| Extras | Menos detalhados | DLC, saves e Title Updates separados por jogo |
+| Biblioteca | Limitada ou inexistente | Catálogo com nomes, capas, tipos e tamanhos |
+| Exclusão | Não disponível ou simples | Jogo, extra individual ou jogo + extras |
+| Arquivos | Operação básica | Gerenciador com copiar, colar, excluir e backup |
+| Backup | Não disponível ou limitado | USB para armazenamento do celular via SAF |
+| Transferência | Dependente da tela | Foreground service com notificação e WakeLock |
+| Falhas | Tratamento limitado | Retry, limpeza de arquivo parcial e mensagens OTG |
+| Diagnóstico | Não disponível | Verificação de USB, partição e assinatura FATX |
+| Desconexão | Remoção direta do cabo | Ejeção segura com bloqueio durante cópia |
+| Interface | Layout mais simples | Responsiva para telefones, tablets e telas largas |
+| Tema | Mais limitado | Tema claro/escuro persistente |
+| Tutorial | Instruções menores | Manual offline com imagens, avisos e idiomas |
+| Traduções | Mais limitadas | Vários diretórios `values-*` e tutorial multilíngue |
+
+## Requisitos
+
+### No Android
+
+- Android 7.0 ou superior, devido ao `minSdk 24`;
+- telefone ou tablet com suporte a **USB Host/USB OTG**;
+- cabo ou adaptador OTG compatível;
+- permissão USB concedida ao aplicativo;
+- armazenamento suficiente para backups, quando necessário.
+
+### No dispositivo Xbox 360
+
+- pendrive ou HD externo formatado pelo Xbox 360;
+- jogos e conteúdos em formato GOD, XBLA, XEX ou STFS;
+- alimentação adequada para o dispositivo USB;
+- para HDs externos, recomenda-se hub USB com fonte própria ou HD com alimentação independente.
+
+## Aviso crítico: não formate o dispositivo USB
+
+Quando um armazenamento formatado pelo Xbox 360 é conectado a um celular Android, o sistema pode informar que há um problema no dispositivo e oferecer a opção de formatá-lo.
+
+**Não toque em “Formatar USB” ou “Formatar dispositivo”.**
+
+O Android normalmente não reconhece nativamente o sistema de arquivos Xbox 360/FATX. O aplicativo acessa o armazenamento internamente usando a biblioteca USB Mass Storage. Formatar o dispositivo pode apagar permanentemente:
+
+- jogos;
+- DLCs;
+- saves;
+- Title Updates;
+- partições e dados do Xbox 360.
+
+Quando o alerta aparecer, simplesmente feche ou cancele a mensagem e continue usando o aplicativo.
+
+## Energia para HD externo
+
+HDs externos consomem mais energia que pendrives. Alguns telefones não conseguem fornecer energia suficiente pelo cabo OTG, causando desconexões ou falhas de leitura e gravação.
+
+Se o HD não for detectado ou desconectar durante a cópia, recomenda-se utilizar:
+
+- hub USB 3.0 com fonte externa;
+- hub USB-C com entrada Power Delivery;
+- adaptador SATA para USB com cabo de alimentação dupla;
+- HD externo com fonte própria.
+
+Pendrives normalmente exigem menos energia e tendem a funcionar diretamente no telefone, desde que o cabo OTG seja compatível.
+
+## Como usar
+
+1. Conecte o pendrive ou HD do Xbox 360 ao telefone usando o cabo ou adaptador OTG.
+2. Ignore qualquer aviso do Android solicitando formatação.
+3. Abra o **My 360 Storage**.
+4. Toque em **Selecionar Pendrive/HD**.
+5. Conceda a permissão USB quando o Android solicitar.
+6. Confira o nome, o espaço total e o espaço livre do dispositivo.
+7. Selecione **Selecionar Jogo** para instalar uma pasta GOD, XBLA ou XEX.
+8. Para XEX, escolha `Games` ou `Apps` como destino.
+9. Para arquivos avulsos, use **Enviar Arquivo(s) Avulso(s)** e informe a pasta de destino.
+10. Acompanhe o progresso pela tela ou pela notificação.
+11. Abra **Meus Jogos** para consultar o conteúdo instalado.
+12. Use o gerenciador de arquivos para copiar, colar, excluir ou fazer backup.
+13. Ao terminar, use **Ejetar dispositivo com segurança** antes de remover o cabo.
+
+## Estrutura técnica
+
+`mermaid
+flowchart TD
+A[MainActivity\nTela principal] B[UsbXboxConnection\nConexão USB compartilhada]
+    A - C[TransferService\nInstalação de jogos]
+    A - D[MeusJogosFragment\nBiblioteca]
+    A -E[FileManagerActivity\nGerenciador de arquivos]
+    A - F[TutorialWebActivity\nManual offline]
+    A --G[UsbDiagActivity\nDiagnóstico USB]
+    C - H[XexParser / StfsParser]
+    D - H
+    D - I[GameDatabase\njogos.csv]
+    E - J[FileManagerService\nCopiar, colar e backup]
+    C -K[UsbFile / libaums]
+    E - K
+-->
+<!--
+### Classes principais
+
+| Classe | Responsabilidade |
+
+| `MainActivity` | Tela principal, conexão OTG, seleção de jogos/arquivos, progresso, tutorial, créditos e navegação. |
+| `UsbXboxConnection` | Singleton que mantém o dispositivo USB, partição e sistema de arquivos ativos. Solicita permissão, tenta inicialização, resolve caminhos e exclui recursivamente. |
+| `TransferService` | Serviço de instalação de jogos e arquivos. Mapeia XEX/STFS, cria diretórios, copia arquivos, atualiza notificação e faz novas tentativas. |
+| `MeusJogosFragment` | Catálogo de jogos e extras. Escaneia GOD/XEX, filtra por Title ID, calcula tamanhos e inicia exclusões. |
+| `GameAdapter` | Apresenta os jogos em grade, carrega capas, mostra detalhes, extras, tamanhos e ações de desinstalação. |
+| `GameDatabase` | Carrega `assets/jogos.csv` e converte Title IDs conhecidos em nomes. |
+| `ListarGames` | Modelo de jogo ou conteúdo extra, com Title ID, nome, caminho, tipo e tamanho. |
+| `XexParser` | Lê `default.xex` e extrai o Title ID. |
+| `StfsParser` | Lê cabeçalhos STFS e obtém informações como Profile ID e nome de exibição. |
+| `FileManagerActivity` | Navegação, seleção e ações do gerenciador de arquivos. |
+| `FileManagerAdapter` | Renderiza arquivos, pastas, tamanhos e seleção múltipla. |
+| `FileManagerService` | Executa cópia USB-USB, colagem e backup USB-Android em segundo plano. |
+| `TutorialWebActivity` | Exibe o tutorial local em WebView. |
+| `UsbDiagActivity` | Lista dispositivos USB e executa diagnóstico somente leitura. |
+| `ScreenUtils` | Calcula dimensões responsivas, colunas e largura de diálogos. |
+| `ThemeManager` | Persiste e aplica o tema claro/escuro. |
+
+## Compilação no Android Studio
+
+O ZIP já é um projeto Android Gradle com módulo `app`.
+
+### Pré-requisitos
+
+- Android Studio atualizado;
+- JDK 17;
+- Android SDK Platform 36;
+- Build-Tools compatível;
+- telefone Android com suporte a OTG para os testes reais;
+- cabo/adaptador OTG;
+- hub alimentado para testes com HD externo, quando necessário.
+
+### Abrir o projeto
+
+1. Extraia o arquivo `My_360_storage_0.8.0_codigo_fonte.zip`.
+2. Abra o Android Studio.
+3. Escolha **Open** ou **Open an Existing Project**.
+4. Selecione a pasta `MeuXboxUSB`, que contém `settings.gradle` e `gradlew`.
+5. Não selecione somente a pasta `app`.
+6. Configure o Gradle JDK como **JDK 17**.
+7. Instale a API 36 pelo SDK Manager.
+8. Aguarde a sincronização do Gradle.
+9. Execute **Build > Make Project**.
+10. Conecte um telefone com USB OTG para validar as funções de armazenamento.
+
+O emulador pode ser usado para testar a interface, mas não substitui os testes reais de USB OTG, libaums, FATX, energia e desconexão.
+
+### Compilação pela linha de comando
+
+Linux/macOS:
+
+`bash
+cd MeuXboxUSB
+chmod +x gradlew
+./gradlew :app:assembleDebug
+
+
+Windows PowerShell:
+
+`powershell
+cd MeuXboxUSB
+.\gradlew.bat :app:assembleDebug
+`
+
+O APK de debug será criado em:
+
+`text
+app/build/outputs/apk/debug/app-debug.apk
+
+
+Para instalar via ADB:
+
+bash
+adb install -r app/build/outputs/apk/debug/app-debug.apk
+
+
+## Testes recomendados
+
+### Interface e permissões
+
+- abrir o aplicativo sem nenhum USB conectado;
+- abrir o tutorial e trocar idioma;
+- alternar tema claro/escuro;
+- abrir créditos e diagnóstico;
+- confirmar mensagens amigáveis para ausência de USB;
+- testar a solicitação de permissão USB.
+
+### Transferência
+
+- copiar uma pasta XEX pequena;
+- confirmar a extração do Title ID;
+- instalar XEX em `Games`;
+- instalar XEX em `Apps`;
+- copiar uma estrutura GOD/STFS;
+- copiar arquivos avulsos;
+- minimizar o app durante a cópia;
+- bloquear a tela durante uma operação;
+- repetir um arquivo existente;
+- simular desconexão em uma cópia de teste;
+- confirmar retry, limpeza de parcial e mensagem de erro.
+
+### Biblioteca
+
+- escanear jogos GOD;
+- escanear jogos XEX;
+- verificar nomes conhecidos e fallback pelo ID;
+- abrir detalhes e calcular tamanho;
+- consultar DLC, saves e updates;
+- confirmar o filtro por jogo;
+- testar exclusão de um
+
+--->
+
 <p align="center">
   <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android"/>
   <img src="https://img.shields.io/badge/Xbox_360-107C10?style=for-the-badge&logo=xbox&logoColor=white" alt="Xbox 360"/>
